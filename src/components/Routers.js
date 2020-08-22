@@ -1,5 +1,7 @@
 import HomeScreen from "../pages/home/homescreen";
 import cellStackNavigator from "../pages/cell/CellStack";
 import HomeSobre from "../pages/home/HomeSobre";
+import PcScreen from "../pages/pc/PcScreen";
+import PcStackNavigator from "../pages/pc/PcStack";
 
-export {HomeScreen, cellStackNavigator, HomeSobre};
+export {HomeScreen, cellStackNavigator, HomeSobre,PcStackNavigator, PcScreen};

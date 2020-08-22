@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar} from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-import {HomeScreen, cellStackNavigator, HomeSobre } from './components/Routers';
+import {HomeScreen, cellStackNavigator, HomeSobre, PcScreen, PcStackNavigator } from './components/Routers';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +19,17 @@ function MyStack() {
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Celular" component={cellStackNavigator} 
+        options={{
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor:{
+            backgroundColor:"#000",
+          },
+          
+        }}
+        />
+        <Stack.Screen name="Pc" component={PcStackNavigator} 
         options={{
           headerStyle: {
             backgroundColor: '#f4511e',

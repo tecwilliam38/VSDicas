@@ -14,11 +14,17 @@ function tvStacknavigator(){
   return(
 
 <Stack.Navigator initialRouteName="Celular">
-      <Stack.Screen name="Smart Tv"  component={TvScreen}/>
+      <Stack.Screen 
+      name="Smart Tv"  component={TvScreen}
+      options={
+        title:"Smart Tv",
+      }
+      />
+
       <Stack.Screen name="Canais" component={Canais} />
-      {/* WhatsApp Group */}
-      <Stack.Screen name="WhatsApp" component={WhatsApp} />
+      
       <Stack.Screen name="Volume" component={Volume} />
+
       <Stack.Screen name="Tv a Cabo" component={TvCabo} />
 </Stack.Navigator>
 

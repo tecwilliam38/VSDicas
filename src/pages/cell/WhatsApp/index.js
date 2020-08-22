@@ -30,7 +30,7 @@ class App extends Component {
     </TouchableOpacity>
     
     <TouchableOpacity style={card}
-    onPress={()=>this.props.navigation.navigate('Grupo')}>
+    onPress={()=>this.props.navigation.navigate('GrupoWhatsApp')}>
     <Text style={cardText}>Como criar um grupo no WhatsApp</Text>
     </TouchableOpacity>
 

@@ -24,11 +24,11 @@ export default class HomeScreen extends Component {
         <Image  style={cardImage} source={cellCard}/>
         <Text style={cardText}>Como usar o celular </Text>
         </TouchableOpacity>
-       <TouchableOpacity style={card} onPress={() => this.props.navigation.navigate('Celular')}>
+       <TouchableOpacity style={card} onPress={() => this.props.navigation.navigate('Pc')}>
         <Image  style={cardImage} source={pcCard}/>
         <Text style={cardText}>Como usar o computador</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={card} onPress={() => this.props.navigation.navigate('Celular')}>
+        <TouchableOpacity style={card} onPress={() => this.props.navigation.navigate('Tv')}>
         <Image  style={cardImage} source={tvCard}/>
         <Text style={cardText}>Como usar Smart Tv </Text>
         </TouchableOpacity>

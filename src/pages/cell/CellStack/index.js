@@ -12,6 +12,7 @@ import EnviarEmail from "../Email/enviar";
 // import Fotos from '../Fotos/index';
 // import Camera from '../Camera/index';
 //import Grupo from '../Grupo/index';
+import Grupo from "../Grupo";
 //import chamada from '../Chamada/index';
 import Audio from '../Audio/index';
 import Instagram from '../Instagram/index';
@@ -188,6 +189,24 @@ function cellStacknavigator(){
       textShadowRadius:4,
             },}}
         component={EnviarEmail} />
+
+        {/* Grupo WhatsApp */}
+        <Stack.Screen name="GrupoWhatsApp" 
+         options={{
+          title:"Grupo",
+          headerStyle:{
+            backgroundColor:"#12211b",
+            },
+          headerTitleAlign:'center',
+          headerTintColor:'#fff',
+          headerTitleStyle: {
+              fontSize:30,
+              fontWeight: 'bold',
+              textShadowOffset:{width:3, height:3},
+      textShadowColor:"#000", 
+      textShadowRadius:4,
+            },}}
+        component={Grupo} />
 </Stack.Navigator>
 
     )

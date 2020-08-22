@@ -4,17 +4,9 @@ import {imageStyle} from "../../styles/imageStyle";
 import {stylesApp} from '../../styles/style';
 
 class App extends Component {
-  handleClick() {
-    let { playstore } = imageStyle;
-  return(
-    <View>
-    <Image source={playstore} style={{flex:1, width:"100%", height:400}}/>
-    </View>    
-  );
-  }
-  render(){
+ render(){
     let {container, voltarBtn, header, headerText, headerImage, flexContent,text, imgBg, textImg, border_Radius_Image} = stylesApp;   
-    let {headerPlaystore, celular_bg, desktop_play, playstore, playstoreBuscar, PlayStoreSrc} = imageStyle;
+    let {headerPlaystore, celular_bg,app_01, app_02, app_03, app_04, playstore, playstoreBuscar, PlayStoreSrc} = imageStyle;
     return (
       <>
   <ImageBackground source={celular_bg}  style={imgBg}>
@@ -35,7 +27,7 @@ class App extends Component {
       procure o ícone da PlayStore:
       </Text>
       <View style={border_Radius_Image}>
-      <Image source={desktop_play} style={textImg}/>
+      <Image source={app_01} style={textImg}/>
       </View>
     </View>
     
@@ -44,7 +36,7 @@ class App extends Component {
       {'\t\t'} Depois toque onde está escrito: "Pesquisar apps e jogos"
       </Text>
       <View style={border_Radius_Image}>
-      <Image source={playstore} style={textImg} />
+      <Image source={app_02} style={textImg} />
       </View>
     </View>
   
@@ -54,7 +46,7 @@ class App extends Component {
           no celular. Por exemplo digite "WhatsApp", que é o App de mensagens mais comum. 
       </Text>
       <View style={border_Radius_Image}>
-      <Image source={playstoreBuscar} style={textImg} />
+      <Image source={app_03} style={textImg} />
       </View>
     </View>
     
@@ -63,7 +55,7 @@ class App extends Component {
       {'\t\t'}Agora toque no ícone da Lupa para fazer a busca.
       </Text>
       <View style={border_Radius_Image}>
-      <Image source={PlayStoreSrc} style={textImg} />
+      <Image source={app_04} style={textImg} />
       </View>
     </View>
     

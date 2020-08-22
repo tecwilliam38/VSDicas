@@ -1,79 +1,99 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground, Image, SafeAreaView, ScrollView } from 'react-native';
-import styles from '../../Styles/master';
+import { View, Text, ImageBackground, Image, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import {imageStyle} from "../../styles/imageStyle";
+import {stylesWhatsapp} from '../../styles/style';
 
 
-// import { Container } from './styles';
-
-export default function Grupo() {
+class Grupo extends Component {
+  render(){  
+  let {imgBg, container, header, headerImage, headerText,text, flexContent, textImg, border_Radius_Image, voltarBtn } = stylesWhatsapp;
+  let {celular_bg, headerWhatsapp, grupo_01,grupo_02, grupo_03, grupo_04, grupo_05, grupo_06, grupo_07} = imageStyle;
+  
   return (
     <>
-  <ImageBackground source={require('../../Assets/celular.jpg')}  style={styles.imgBg}>
-  <SafeAreaView>
-  <ScrollView>
-  <View style={styles.container}>
-    <View style={styles.header}>
-     <Text style={styles.headerText}>Como criar um grupo no WhatsApp</Text>
-     </View>
-     {/* Fim da class Header */}     
-     <View style={styles.textMenu}>
-     
-     <View style={styles.flexContent}>
-     <Text style={styles.text}>
-     {'\t\t'}Para adicionar um grupo no WhatsApp abra o aplicativo. Na tela inicial toque no ícone que fica na parte de 
-     baixo da tela, à direita, conforme a imagem abaixo:
-     </Text>
-     <Image source={require('../../Assets/WhatsApp/contato01.png')} style={styles.textImg}/>
-     </View>
-
-     <View style={styles.flexContent}>
-     <Text style={styles.text}>
-     {'\t\t'} A seguir toque no ícone ao lado do texto "Novo Grupo", veja a imagem abaixo: 
-     </Text>
-     <Image source={require('../../Assets/WhatsApp/grupo02.png')} style={styles.textImg}/>
-     </View>
-
-     <View style={styles.flexContent}>
-     <Text style={styles.text}>
-     {'\t\t'} A seguir toque nos contatos que você deseja adicionar ao seu grupo conforme a imagem abaixo:
-     </Text>
-     <Image source={require('../../Assets/WhatsApp/grupo03.png')} style={styles.textImg}/>
-     </View>
-
-     <View style={styles.flexContent}>
-     <Text style={styles.text}>
-     {'\t\t'} Na próxima tela, digite o nome que você dará ao grupo. Pode ser qualquer palavra, mas não esqueça que
-      o nome tem que ter relação com o assunto que será discutido no grupo.
-     </Text>
-     <Image source={require('../../Assets/WhatsApp/grupo04.png')} style={styles.textImg}/>
-     </View>
-
-     <View style={styles.flexContent}>
-     <Text style={styles.text}>
-     {'\t\t'}Ainda nessa tela, você pode adicionar uma 
-      imagem para simbolizar o grupo. Para isso, toque no ícone com o desenho de uma câmera, a esquerda de onde 
-      você digitou o nome do grupo.
-     </Text>
-     <Image source={require('../../Assets/WhatsApp/grupo05.png')} style={styles.textImg}/>
-     </View>
-     <View style={styles.flexContent}>
-     <Text style={styles.text}>
-     {'\t\t'}Se você clicou na imagem da câmera, para adicionar uma imagem do grupo, escolha
-     onde está sua imagem: "Galeria" (Que é na memória do celular),  "Câmera" (Que é para tirar uma nova Foto) ou "Buscar na Internet" (Que será na internet,
-     mas para isso você precisa ter internet no celular) como na imagem abaixo:
-     </Text>
-     <Image source={require('../../Assets/WhatsApp/grupo06.png')} style={styles.textImg}/>
-     </View>
-
-
-     </View>
-    </View>
-    {/* Fim da Class Contanier */}     
-    </ScrollView>
-    </SafeAreaView>  
-  </ImageBackground>  
-  
-</>
+      <ImageBackground source={celular_bg}  style={imgBg}>
+      <SafeAreaView>
+        <ScrollView>
+        <View style={container}>
+        <View style={header}>
+              <Image style={headerImage} source={headerWhatsapp}/>
+              <Text style={headerText}>Como criar um grupo no WhatsApp</Text>
+            </View>
+            {/* Fim da Header */}
+            <View style={container}>
+            <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'} Para criar um grupo no WhatsApp abra o aplicativo. Na tela inicial toque no ícone que fica na parte de 
+                  baixo da tela, à direita, conforme a imagem abaixo:
+                </Text>
+                <View style={border_Radius_Image}>
+                  <Image source={grupo_01} style={textImg}/>
+                </View>
+              </View>
+              <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'} Agora toque nos contatos que você quer incluir no seu grupo.{'\n\t\t'}
+                  Lembre-se que as pessoas devem saber que irão fazer parte de um grupo que você criou, senão
+                   eles vão sair do grupo assim que for criado.
+                </Text>
+                <View style={border_Radius_Image}>
+                  <Image source={grupo_02} style={textImg}/>
+                </View>
+              </View>
+              <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'} Aqui você escolhe o nome do grupo
+                </Text>
+                <View style={border_Radius_Image}>
+                  <Image source={grupo_03} style={textImg}/>
+                </View>
+              </View>
+              <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'} E aqui se você quiser escolha uma imagem ou foto para o grupo.
+                </Text>
+                <View style={border_Radius_Image}>
+                  <Image source={grupo_04} style={textImg}/>
+                </View>
+              </View>
+              <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'} Você pode escolher uma foto da sua galeria, pode tirar uma foto na hora ou pesquisar.
+                  {'\n\t\t'}No nosso exemplo vamos escolher uma foto da galeria.
+                </Text>
+                <View style={{flex:1, flexDirection:"row", height:340, marginBottom:15}}>
+                <View style={{...border_Radius_Image,}}>
+                  <Image source={grupo_05} style={textImg}/>
+                </View>
+                <View style={{...border_Radius_Image, marginLeft:25}}>
+                  <Image source={grupo_06} style={textImg}/>
+                </View>
+                </View>
+              </View>
+              <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'}Depois ajeite o tamanho da imagem e toque em "concluído".
+                </Text>
+                <View style={border_Radius_Image}>
+                  <Image source={grupo_07} style={textImg}/>
+                </View>
+              </View>
+              <View style={flexContent}>
+                <Text style={text}>
+                  {'\t\t'}Parabéns, seu grupo do WhatsApp foi criado, agora é só compartilhar com seus amigos.
+                </Text>                
+              </View>
+              <TouchableOpacity onPress={()=> this.props.navigation.goBack()} style={voltarBtn}>
+                <Text style={{color:'#000',padding:15, fontSize:25}}>Voltar</Text>
+              </TouchableOpacity>
+            </View>
+        </View>
+        </ScrollView>
+      </SafeAreaView>      
+      </ImageBackground>
+    </>
 
   );
 }
+}
+ export default Grupo;
