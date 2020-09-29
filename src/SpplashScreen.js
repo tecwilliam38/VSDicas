@@ -22,7 +22,7 @@ render(){
                 size={100} color="#fff" 
                 /> */}
             <Spinner
-            style={{flex:1, justifyContent:"center", marginTop:450, borderRadius:"50%"}}
+            style={{flex:1, justifyContent:"center", marginTop:420, borderRadius:"50%"}}
             color="#fff"
             // color="#268f8a"
             size={80}
