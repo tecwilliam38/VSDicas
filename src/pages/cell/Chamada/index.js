@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {ImageBackground, View, SafeAreaView, ScrollView, Image, Text} from 'react-native';
-import styles from '../../Styles/master';
+import {masterStyle, stylesWhatsapp} from "../../styles/style";
+import {imageStyle} from "../../styles/imageStyle";
 
 class chamada extends Component {
 render(){

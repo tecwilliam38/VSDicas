@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {ImageBackground, View, Image, SafeAreaView, TouchableOpacity, ScrollView, Text} from 'react-native';
 import {imageStyle} from '../../styles/imageStyle';
-import {stylesEmail} from '../../styles/style';
+import {stylesEmail, masterStyle} from '../../styles/style';
 
 class CriarEmail extends Component {
  render(){
-  let {container, voltarBtn, header, headerText, headerImage, flexContent,text, imgBg, textImg, border_Radius_Image} = stylesEmail;   
+   let {container, header, headerImage, headerText } = masterStyle;
+  let {voltarBtn, flexContent,text, imgBg, textImg, border_Radius_Image} = stylesEmail;   
   let {headerEmail, celular_bg,email_01, email_02, email_03, email_04, email_05,
     email_06, email_07, email_08, email_09, email_10, email_11, email_12,
   } = imageStyle;
@@ -16,7 +17,7 @@ class CriarEmail extends Component {
       <ScrollView>
         <View style={container}>
           <View style={header}>
-            <Image source={headerEmail} style={headerImage} resizeMode="stretch"/>
+            <Image source={headerEmail} style={headerImage}/>
             <Text style={headerText}>
             Como criar uma conta de e-mail
             </Text>

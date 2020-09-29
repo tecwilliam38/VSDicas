@@ -24,7 +24,7 @@ const Stack = createStackNavigator();
 function cellStacknavigator(){
     return(
 
-<Stack.Navigator initialRouteName="Celular">
+<Stack.Navigator initialRouteName="Celular" screenOptions={{headerShown:false}}>
         <Stack.Screen name="Celular"
         options={{
             headerStyle:{

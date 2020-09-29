@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {ImageBackground, View, Image, SafeAreaView, ScrollView, Text} from 'react-native';
+import {ImageBackground, View, Image, SafeAreaView, ScrollView, Text, TouchableOpacity} from 'react-native';
 import {stylesFacebook} from '../../styles/style';
 import {imageStyle} from "../../styles/imageStyle";
-
+import {css_master} from "../../styles/css";
 
 class Instagram extends Component {
   render(){
@@ -12,7 +12,12 @@ class Instagram extends Component {
     <>
   <ImageBackground source={celular_bg}  style={imgBg}>
     <SafeAreaView><ScrollView>
-  <View style={container}>
+    <View style={css_master.container}>
+        <TouchableOpacity style={css_master.bannerHeader}>
+          <Image source={imageStyle.bannerImg} style={css_master.bannerImage}/>
+        </TouchableOpacity>
+        </View>
+  <View style={{...container, marginTop:10}}>
     <View style={header}>
     <Image source={headerInstagram} style={headerImage}/>
      <Text style={headerText}> Como criar uma conta no Instagram</Text>

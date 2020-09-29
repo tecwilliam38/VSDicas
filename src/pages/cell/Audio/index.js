@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {ImageBackground, View, Image, Text, SafeAreaView, ScrollView, TouchableOpacity} from 'react-native';
 import {imageStyle} from "../../styles/imageStyle";
-import {stylesApp} from '../../styles/style';
+import {masterStyle, stylesApp} from '../../styles/style';
 
 class Audio extends Component {
 render(){
-  let{container, imgBg,header, headerText, headerImage, flexContent,text, textImg, voltarBtn} = stylesApp;
+  let{container, header, headerImage, headerText} = masterStyle;
+  let{imgBg, flexContent,text, textImg, voltarBtn} = stylesApp;
   let {headerAudio, celular_bg, audio_01, audio_02, audio_03, audio_04} = imageStyle;
   return (
     <>

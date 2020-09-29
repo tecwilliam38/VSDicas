@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import {ImageBackground, View, Image, Text, SafeAreaView, ScrollView} from 'react-native';
-import styles from '../../Styles/master';
-import Styles from '../App/style';
-import {IMAGE} from '../../Assets/imagens';
-
-
+import {masterStyle, stylesApp} from "../../styles/style";
+import {imageStyle} from "../../styles/imageStyle";
 class Camera extends Component{
   render(){
-  let {container, textMenu, text, flexContent, imgBg, textImg } = styles;
-  let{menuImage, header, headerText,} = Styles;
+  let{container, header, headerText, headerImage} = masterStyle; 
+  let {textMenu, text, flexContent, imgBg, textImg } = stylesApp;
+  let{menuImage, header, headerText,} = imageStyle;
   return (
     <>
     <ImageBackground source={require('../../Assets/celular.jpg')}  style={imgBg}>

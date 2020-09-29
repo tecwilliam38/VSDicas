@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, ImageBackground, Image, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import {masterStyle, stylesWhatsapp} from "../../styles/style";
 import {imageStyle} from "../../styles/imageStyle";
-import {stylesWhatsapp} from '../../styles/style';
 
 
 class Grupo extends Component {
-  render(){  
-  let {imgBg, container, header, headerImage, headerText,text, flexContent, textImg, border_Radius_Image, voltarBtn } = stylesWhatsapp;
+  render(){ 
+  let {container, header, headerImage, headerText} = masterStyle; 
+  let {imgBg, text, flexContent, textImg, border_Radius_Image, voltarBtn } = stylesWhatsapp;
   let {celular_bg, headerWhatsapp, grupo_01,grupo_02, grupo_03, grupo_04, grupo_05, grupo_06, grupo_07} = imageStyle;
   
   return (
@@ -61,11 +62,12 @@ class Grupo extends Component {
                   {'\t\t'} Você pode escolher uma foto da sua galeria, pode tirar uma foto na hora ou pesquisar.
                   {'\n\t\t'}No nosso exemplo vamos escolher uma foto da galeria.
                 </Text>
-                <View style={{flex:1, flexDirection:"row", height:340, marginBottom:15}}>
-                <View style={{...border_Radius_Image,}}>
+                <View style={{flex:1, flexDirection:"row", height:340,width:"100%", justifyContent:"center", marginBottom:15}}>
+                
+                <View style={{...border_Radius_Image, width:"49%"}}>
                   <Image source={grupo_05} style={textImg}/>
                 </View>
-                <View style={{...border_Radius_Image, marginLeft:25}}>
+                <View style={{...border_Radius_Image, width:"49%", marginLeft:10}}>
                   <Image source={grupo_06} style={textImg}/>
                 </View>
                 </View>

@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 function PcStackNavigator(){
     return(
 
-<Stack.Navigator initialRouteName="PcScreen">
+<Stack.Navigator initialRouteName="PcScreen" screenOptions={{headerShown:false}}>
         <Stack.Screen name="PcScreen"
         options={{
             title:"Computador",

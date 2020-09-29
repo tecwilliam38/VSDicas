@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { View, Text, ImageBackground, Image, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import {imageStyle} from "../../styles/imageStyle";
-import {stylesApp} from '../../styles/style';
+import {masterStyle ,stylesApp} from '../../styles/style';
+import {css_master} from "../../styles/css";
 
 class App extends Component {
  render(){
-    let {container, voltarBtn, header, headerText, headerImage, flexContent,text, imgBg, textImg, border_Radius_Image} = stylesApp;   
+    let {container, header, headerImage, headerText} = masterStyle;
+    let {voltarBtn, flexContent,text, imgBg, textImg, border_Radius_Image} = stylesApp;   
     let {headerPlaystore, celular_bg,app_01, app_02, app_03, app_04, playstore, playstoreBuscar, PlayStoreSrc} = imageStyle;
     return (
       <>
   <ImageBackground source={celular_bg}  style={imgBg}>
   <SafeAreaView>
   <ScrollView>
+  <View style={css_master.container}>
+        <TouchableOpacity style={css_master.bannerHeader}>
+          <Image source={imageStyle.bannerImg} style={css_master.bannerImage}/>
+        </TouchableOpacity>
+        </View>
   <View style={container}>
   <View style={header}>  
   <Image source={headerPlaystore} style={headerImage}/>
@@ -66,8 +73,9 @@ class App extends Component {
       </Text>
       </View> 
      
-     <TouchableOpacity onPress={()=> this.props.navigation.navigate('Celular')} style={voltarBtn}>
-       <Text style={{color:'#000',padding:15, fontSize:25}}>Voltar</Text>
+     <TouchableOpacity onPress={()=> this.props.navigation.goBack()} style={css_master.button}>
+       <Image style={css_master.buttonImage} source={imageStyle.sobreImg}/>
+       <Text style={css_master.buttonText}>Voltar</Text>
      </TouchableOpacity>
      </View>
      </View>

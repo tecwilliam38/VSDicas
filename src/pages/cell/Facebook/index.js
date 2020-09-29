@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {ImageBackground, View, Image, SafeAreaView, ScrollView, Text, TouchableOpacity} from 'react-native';
 import {stylesFacebook} from '../../styles/style';
 import {imageStyle} from "../../styles/imageStyle";
+import {css_master} from "../../styles/css";
 
 class Facebook extends Component {
   render(){
@@ -13,8 +14,13 @@ class Facebook extends Component {
   <ImageBackground source={celular_bg} style={imgBg}>
   <SafeAreaView>
     <ScrollView>
+    <View style={css_master.container}>
+        <TouchableOpacity style={css_master.bannerHeader}>
+          <Image source={imageStyle.bannerImg} style={css_master.bannerImage}/>
+        </TouchableOpacity>
+        </View>
       <View style={container}>
-        <View style={header}>
+        <View style={{...header, marginTop:10}}>
         <Image source={headerFacebook} style={headerImage}resizeMode="stretch" />
         <Text style={headerText}>
         Como criar uma conta no Facebook

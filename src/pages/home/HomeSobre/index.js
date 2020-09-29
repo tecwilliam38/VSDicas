@@ -2,21 +2,25 @@ import React, { Component } from 'react';
 
 import { View, Text, SafeAreaView, ScrollView, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import {imageStyle} from "../../styles/imageStyle";
+import { homeStyle } from '../../styles/style';
 import {stylesApp} from '../../styles/style';
+import {css_master} from "../../styles/css";
 
 export default class HomeSobre extends Component {
   render() {
-    let {container, voltarBtn, header, headerText, headerImage, flexContent,text, imgBg, textImg} = stylesApp;   
-    let {headerSobre, sobreBg, desktop_play, playstore, playstoreBuscar, PlayStoreSrc} = imageStyle;
+    let {container, voltarBtn, flexContent,text, imgBg, textImg} = stylesApp;   
+    let {bannerHeader,bannerImage, bannerText} = homeStyle;
+    let {bannerImg, sobreBg, desktop_play, playstore, playstoreBuscar, PlayStoreSrc} = imageStyle;
     return (
     <>
     <ImageBackground source={sobreBg} style={imgBg}>
     <SafeAreaView><ScrollView>
     <View style={container}>
-        <View style={header}>
-        <Image source={headerSobre} style={headerImage} resizeMode='stretch'/>
-            <Text style={headerText}>Sobre o V S Dicas</Text>
-        </View>
+    <TouchableOpacity style={bannerHeader}>
+          <Image source={bannerImg} style={bannerImage}/>
+    </TouchableOpacity>
+    <Text style={bannerText}>Sobre o Vs Dicas</Text>
+    </View>
 
         <View style={container}>
             <View style={flexContent}>
@@ -36,10 +40,11 @@ export default class HomeSobre extends Component {
                     E banco Santander:{'\n'} Agência: 3306 {'\n'}Conta 01009770 dig 8
                     </Text>
             </View>
-    <TouchableOpacity onPress={()=> this.props.navigation.goBack()} style={voltarBtn}>
-       <Text style={{color:'#000',padding:15, fontSize:25}}>Voltar</Text>
+    <TouchableOpacity onPress={()=> this.props.navigation.goBack()} style={css_master.button}>
+    <Image style={css_master.buttonImage} source={imageStyle.sobreImg}/>
+       <Text style={css_master.buttonText}>Voltar</Text>
      </TouchableOpacity>
-        </View>
+        
     </View>    
     </ScrollView>
     </SafeAreaView>
